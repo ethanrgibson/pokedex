@@ -57,7 +57,7 @@ export class ActivePokemon {
       ${this.name}
     </h2>
     <div>
-      <button class="btn btn-outline-danger fs-5 text-dark">
+      <button onclick="app.sandboxController.captureActivePokemon()" class="btn btn-outline-danger fs-5 text-dark">
         C A T C H
       </button>
     </div>
