@@ -5,7 +5,7 @@ class PokemonsService {
 
 
   async getPokemons() {
-    const response = await pokeApi.get('pokemon')
+    const response = await pokeApi.get('pokemon?limit=151')
     console.log('pokemons are here some service', response.data);
 
 
