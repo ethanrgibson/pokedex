@@ -52,10 +52,15 @@ export class ActivePokemon {
 
 
 <div class=" text-capitalize bg-light shadow-lg mt-2 rounded p-1">
-  <div class="border border-success rounded p-2">
+  <div class="d-flex justify-content-between border border-success rounded p-2">
     <h2>
       ${this.name}
     </h2>
+    <div>
+      <button class="btn btn-outline-danger fs-5 text-dark">
+        C A T C H
+      </button>
+    </div>
   </div>
   <div class="d-flex justify-content-center bg-secondary rounded m-2">
     <img src="${this.img}"
