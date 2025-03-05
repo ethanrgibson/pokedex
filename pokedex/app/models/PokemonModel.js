@@ -1,5 +1,5 @@
 
-export class wildPokemon {
+export class WildPokemon {
 
 
   constructor(data) {
@@ -12,7 +12,11 @@ export class wildPokemon {
 
     return `
     
-    
+    <div>
+      <button class="text-capitalize mb-2 bg-dark text-white rounded fs-3 w-100">
+        ${this.name}
+      </button>
+    </div>
     
     
     `
