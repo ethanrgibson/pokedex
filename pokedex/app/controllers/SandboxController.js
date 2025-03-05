@@ -6,6 +6,7 @@ export class SandboxController {
 
   constructor() {
 
+    AppState.on('identity', this.drawCapturedPokemon)
     AppState.on('SandboxPokemon', this.drawCapturedPokemon)
     AppState.on('SandboxPokemon', this.countCapturedPokemons)
 
