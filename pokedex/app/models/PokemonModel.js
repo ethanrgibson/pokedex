@@ -13,7 +13,7 @@ export class WildPokemon {
     return `
     
     <div>
-      <button class="text-capitalize mb-2 bg-dark text-white rounded fs-3 w-100">
+      <button onclick="app.pokemonsController.getActivePokemon('${this.name}')"  class="text-capitalize mb-2 bg-dark text-white rounded fs-3 w-100">
         ${this.name}
       </button>
     </div>

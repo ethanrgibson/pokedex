@@ -17,12 +17,13 @@ export class PokemonsController {
     try {
       await pokemonsService.getWildPokemons()
 
+
+
     } catch (error) {
       console.error('Could Not Get Pokemons');
       Pop.error(error, 'Could Not Get Pokemons')
     }
   }
-
 
   drawWildPokemon() {
     const pokemons = AppState.WildPokemon
@@ -35,5 +36,22 @@ export class PokemonsController {
     wildPokeElem.innerHTML = wildPokemonContent
 
   }
+
+  async getActivePokemon(pokeName) {
+
+    try {
+      await pokemonsService.getActivePokemon(pokeName)
+
+      console.log('Getting Pokemon', pokeName);
+
+
+
+    } catch (error) {
+      console.error('Could Not Get Pokemon');
+      Pop.error(error, 'Could Not Get Pokemon')
+
+    }
+  }
+
 
 }

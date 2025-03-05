@@ -14,10 +14,13 @@ class PokemonsService {
 
     AppState.WildPokemon = pokemon
 
-
   }
 
 
+  getActivePokemon(pokeName) {
+    console.log('got pokemon named', pokeName);
+
+  }
 
 
 }
