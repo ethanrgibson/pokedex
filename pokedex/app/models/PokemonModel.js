@@ -49,7 +49,7 @@ export class ActivePokemon {
     return `
 
 
-<div class="bg-light shadow-lg mt-2 rounded p-1">
+<div class=" text-capitalize bg-light shadow-lg mt-2 rounded p-1">
   <div class="border border-success rounded p-2">
     <h2>
       ${this.name}
