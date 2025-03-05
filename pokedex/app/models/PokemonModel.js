@@ -1,3 +1,4 @@
+import { ActivePokemon } from "./ActivePokemon.js"
 
 export class WildPokemon {
 
@@ -25,4 +26,12 @@ export class WildPokemon {
 }
 
 
+export class SandboxPokemon extends ActivePokemon {
 
+  constructor(data) {
+    super(data)
+    this.id = data.id
+  }
+
+
+}
