@@ -42,10 +42,6 @@ export class PokemonsController {
     try {
       await pokemonsService.getActivePokemon(pokeName)
 
-      console.log('Getting Pokemon', pokeName);
-
-
-
     } catch (error) {
       console.error('Could Not Get Pokemon');
       Pop.error(error, 'Could Not Get Pokemon')

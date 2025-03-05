@@ -27,19 +27,18 @@ export class WildPokemon {
 
 
 
-export class Pokemon {
+export class ActivePokemon {
 
   constructor(data) {
     this.name = data.name
-    this.nickName = data.nickName
-    this.img = data.img
-    this.backImg = data.backImg
+    this.img = data.img ?? data.sprites.front_default
+    this.backImg = data.backImg ?? data.sprites.back_default
     this.weight = data.weight
     this.height = data.height
-    this.health = data.health
-    this.defense = data.defense
-    this.attack = data.attack
-    this.types = data.types
+    this.health = data.health || data.stats[0].base_stat
+    this.defense = data.defense || data.stats[2].base_stat
+    this.attack = data.attack || data.stats[1].base_stat
+    this.typeOne = data.types || data.types[0].type.name
 
 
   }

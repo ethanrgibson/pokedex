@@ -1,5 +1,5 @@
 import { AppState } from "../AppState.js";
-import { WildPokemon } from "../models/PokemonModel.js";
+import { ActivePokemon, WildPokemon } from "../models/PokemonModel.js";
 import { pokeApi } from "../utils/Axios.js"
 
 class PokemonsService {
@@ -17,8 +17,19 @@ class PokemonsService {
   }
 
 
-  getActivePokemon(pokeName) {
-    console.log('got pokemon named', pokeName);
+  async getActivePokemon(pokeName) {
+    const response = await pokeApi.get(`pokemon/${pokeName}`)
+
+    console.log('getActivePokemon', response.data);
+
+    AppState.ActivePokemon = new ActivePokemon(response.data)
+
+
+    // const pokemon = response.data.results.map(pojo => new ActivePokemon(pojo))
+
+    // AppState.ActivePokemon = pokemon
+
+    console.log('Info about active pokemon', AppState.ActivePokemon);
 
   }
 
