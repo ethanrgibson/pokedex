@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js";
 import { Identity } from "../Auth/Identity.js";
 
 
@@ -32,9 +33,7 @@ export class ActivePokemon {
       ${this.name}
     </h2>
     <div>
-      <button onclick="app.sandboxController.captureActivePokemon()" class="btn btn-outline-danger fs-5 text-dark">
-        C A T C H
-      </button>
+      ${this.catchButton}
     </div>
   </div>
   <div class="d-flex justify-content-center bg-secondary rounded m-2">
@@ -81,12 +80,15 @@ export class ActivePokemon {
 
   get catchButton() {
 
-    if (Identity == null) {
+    const user = AppState.identity
+    if (user == null) {
       return ''
     }
-
-
-
+    return `
+    <button onclick="app.sandboxController.captureActivePokemon()" class="btn btn-outline-danger fs-5 text-dark">
+        C A T C H
+      </button>
+    `
   }
 
 
