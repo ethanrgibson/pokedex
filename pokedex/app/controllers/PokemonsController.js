@@ -13,7 +13,7 @@ export class PokemonsController {
   async getPokemons() {
 
     try {
-      await pokemonsService.getPokemons()
+      await pokemonsService.getWildPokemons()
 
     } catch (error) {
       console.error('Could Not Get Pokemons');
