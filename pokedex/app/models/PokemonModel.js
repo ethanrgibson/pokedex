@@ -1,3 +1,28 @@
+
+export class wildPokemon {
+
+
+  constructor(data) {
+    this.name = data.name
+    this.url = data.url
+  }
+
+
+  get buttonHTML() {
+
+    return `
+    
+    
+    
+    
+    `
+  }
+
+}
+
+
+
+
 export class Pokemon {
 
   constructor(data) {
