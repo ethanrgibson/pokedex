@@ -4,6 +4,9 @@ import { Pop } from "../utils/Pop.js";
 
 export class SandboxController {
 
+  // TODO Need to have captured Pokemon save through refresh
+
+
   constructor() {
 
     AppState.on('identity', this.drawCapturedPokemon)
