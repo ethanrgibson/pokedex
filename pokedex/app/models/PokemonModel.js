@@ -39,7 +39,9 @@ export class ActivePokemon {
     this.health = data.health || data.stats[0].base_stat
     this.defense = data.defense || data.stats[2].base_stat
     this.attack = data.attack || data.stats[1].base_stat
-    this.type = data.types || data.types[0].type.name
+
+    // TODO Fix types
+    // this.type = data.types || data.types[0].type.name
 
   }
 
@@ -61,16 +63,7 @@ export class ActivePokemon {
     <img src="${this.backImg}"
       alt="Front of ${this.name}" class="poke-img">
   </div>
-  <div class="bg-blue rounded-pill text-center fs-2 text-white">
-    <p>
-     ${this.type}
-    </p>
-  </div>
-  <div class="bg-green rounded-pill text-center fs-2 text-white">
-    <p>
-      Grass
-    </p>
-  </div>
+
   <div class=" border border-success rounded px-2">
     <div class="d-flex justify-content-between">
       <p class="fs-3">Health:</p>
