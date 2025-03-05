@@ -1,3 +1,4 @@
+import { Identity } from "../Auth/Identity.js";
 
 
 
@@ -25,7 +26,7 @@ export class ActivePokemon {
     return `
 
 
-<div class=" text-capitalize bg-light shadow-lg mt-2 rounded p-1">
+<div class=" text-capitalize bg-light shadow-lg mt-2 rounded p-1 sticky-top">
   <div class="d-flex justify-content-between border border-success rounded p-2">
     <h2>
       ${this.name}
@@ -73,6 +74,17 @@ export class ActivePokemon {
 
 
 `;
+
+
+  }
+
+
+  get catchButton() {
+
+    if (Identity == null) {
+      return ''
+    }
+
 
 
   }

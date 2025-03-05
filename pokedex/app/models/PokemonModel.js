@@ -38,7 +38,7 @@ export class SandboxPokemon extends ActivePokemon {
 
     return `
 
- <button class="bg-cyan text-white rounded fs-3 w-100">
+ <button class="text-capitalize bg-cyan text-white rounded fs-3 w-100 mb-2">
         ${this.name}
       </button>
 `

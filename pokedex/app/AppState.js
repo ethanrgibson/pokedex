@@ -2,6 +2,7 @@ import { SandboxPokemon, WildPokemon } from './models/PokemonModel.js'
 import { ActivePokemon } from "./models/ActivePokemon.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
+import { Identity } from './Auth/Identity.js'
 
 class ObservableAppState extends EventEmitter {
 
@@ -13,6 +14,11 @@ class ObservableAppState extends EventEmitter {
 
   /** @type {SandboxPokemon[]}   */
   SandboxPokemon = []
+
+  /**
+   * @type {Identity}
+   */
+  identity = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

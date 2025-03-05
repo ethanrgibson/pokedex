@@ -7,6 +7,7 @@ export class SandboxController {
   constructor() {
 
     AppState.on('SandboxPokemon', this.drawCapturedPokemon)
+    AppState.on('SandboxPokemon', this.countCapturedPokemons)
 
   }
 
@@ -30,6 +31,15 @@ export class SandboxController {
     pokemons.forEach(pokemon => pokemonContent += pokemon.capturedPokemonHTML);
     const pokemonElem = document.getElementById('capturedPokemon')
     pokemonElem.innerHTML = pokemonContent
+
+  }
+
+  countCapturedPokemons() {
+
+    const pokemon = AppState.SandboxPokemon
+
+    const countedPokemonElem = document.getElementById('countedPokemon')
+    countedPokemonElem.innerText = pokemon.length.toString()
 
   }
 
