@@ -1,4 +1,5 @@
-import { ActivePokemon, WildPokemon } from './models/PokemonModel.js'
+import { WildPokemon } from './models/PokemonModel.js'
+import { ActivePokemon } from "./models/ActivePokemon.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 

@@ -7,7 +7,7 @@ class SandboxService {
 
     const response = await api.post('api/pokemon', caughtPokemon)
 
-    console.log(response.data);
+
 
 
   }
