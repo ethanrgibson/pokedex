@@ -18,5 +18,8 @@
     "titleBar.inactiveBackground": "#24810d99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#24810d"
+  "peacock.color": "#24810d",
+  "cSpell.words": [
+    "Pokemons"
+  ]
 }
