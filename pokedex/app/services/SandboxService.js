@@ -10,11 +10,7 @@ class SandboxService {
 
     const newPokemon = new SandboxPokemon(response.data)
 
-    console.log(newPokemon);
-
-
-
-
+    AppState.SandboxPokemon.push(newPokemon)
 
   }
 

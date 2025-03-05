@@ -34,4 +34,17 @@ export class SandboxPokemon extends ActivePokemon {
   }
 
 
+  get capturedPokemonHTML() {
+
+    return `
+
+ <button class="bg-cyan text-white rounded fs-3 w-100">
+        ${this.name}
+      </button>
+`
+
+
+
+  }
+
 }
