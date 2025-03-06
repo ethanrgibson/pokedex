@@ -14,6 +14,17 @@ class SandboxService {
 
   }
 
+  async getPokemon() {
+
+    const response = await api.get('api/pokemon')
+
+    const pokes = response.data.map(pojo => new SandboxPokemon(pojo))
+
+    AppState.SandboxPokemon = pokes
+
+
+
+  }
 
 }
 

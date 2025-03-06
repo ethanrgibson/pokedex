@@ -9,7 +9,7 @@ export class SandboxController {
 
   constructor() {
 
-    AppState.on('identity', this.drawCapturedPokemon)
+    AppState.on('identity', this.getCapturedPokemon)
     AppState.on('SandboxPokemon', this.drawCapturedPokemon)
     AppState.on('SandboxPokemon', this.countCapturedPokemons)
 
@@ -47,5 +47,10 @@ export class SandboxController {
 
   }
 
+  getCapturedPokemon() {
+    sandboxService.getPokemon()
+
+
+  }
 
 }
